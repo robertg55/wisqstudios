@@ -1,0 +1,347 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Printing</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+
+	<link rel="stylesheet" href="assets/codemirror/show-hint.css">
+	<link rel="stylesheet" href="assets/codemirror/codemirror.css">
+	<script src="assets/codemirror/codemirror.js"></script>
+	<script src="assets/codemirror/matchbrackets.js"></script>
+	<script src="assets/codemirror/show-hint.js"></script>
+	<script src="assets/codemirror/clike.js"></script>
+	<script src="assets/codemirror/annotatescrollbar.js"></script>
+	<script src="assets/codemirror/matchesonscrollbar.js"></script>
+	<script src="assets/codemirror/searchcursor.js"></script>
+	<script src="assets/codemirror/match-highlighter.js"></script>
+</head>
+
+<body>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+
+				<!-- Header -->
+				<header id="header">
+					<a href="java-tutorial/printing" class="logo"><strong>Basic</strong> Printing</a>
+				</header>
+
+				<!-- Content -->
+				<section>
+
+					<header>
+						<h1>Displaying text to the screen</h1>
+					</header>
+					<h2>Description:</h2>
+					<p>When you "print" something in java it will display the text in your console. Please check "Setup Environment" page if you don't know where the console is.</p>
+					<hr class="major" />
+					<h2>Demonstration:</h2>
+					Calling the method System.out.println("Hello World!") will print the text that is inside the brackets.
+					<div class="block-code">
+						<textarea class="java-code">
+public class DriverClass {
+
+	public static void main(String[] args) {
+	
+		System.out.println("Hello World!");
+		
+	}
+	
+}
+						</textarea>
+					</div>
+					<p>The following code should print:</p>
+					<div class="block">
+						Hello World!<br/>
+					</div>
+					<p>
+						There is also the System.out.print("Hello World!") where there's no "ln" and the end of print which means that a new line will not be created after printing the text. Meaning that if you use the print method twice, the first time you have used it there won't be a new line and the second print will just appear at the end of first one.
+					</p>
+					<div class="block-code">
+						<textarea class="java-code">
+public class DriverClass {
+	public static void main(String[] args) {
+		System.out.print("This is");
+		System.out.print(" ");
+		System.out.print("what hap");
+		System.out.println("pens when you use print().");
+		System.out.println("Instead of");
+		System.out.println("using println().");
+	}
+}
+						</textarea>
+					</div>
+					<div class="block">
+						This is what happens when you use print().<br/> Instead of<br/> using println().<br/>
+					</div>
+
+
+
+					<hr class="major" />
+					<h2>Special Characters:</h2>
+					<p>
+						Some characters must have special formatting in order to be printed. For example, everything within your brackets is printed, but what if you want to print the bracket character (")? To print those special characters you must put an up to down slash (\) before them. So if we want to print " we would have to type \". Now that the slash is used to represent a special character, it must itself be a special character and represented with a slash before. Here is a list of special characters and how to represent them:
+					</p>
+					<div class="table-wrapper">
+						<table class="alt">
+							<thead>
+								<tr>
+									<th>Character</th>
+									<th>How to display it</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>"</td>
+									<td>\"</td>
+								</tr>
+								<tr>
+									<td>\</td>
+									<td>\\</td>
+								</tr>
+								<tr>
+									<td>'</td>
+									<td>\'</td>
+								</tr>
+								<tr>
+									<td>New line (like pressing enter)</td>
+									<td>\\</td>
+								</tr>
+								<tr>
+									<td>Tab</td>
+									<td>\t</td>
+								</tr>
+								<tr>
+									<td>Backspace (like erasing a character)</td>
+									<td>\b</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<p>You might have noticed that the single quote (') also made the list even though you don't actually need to represent it as \' when printing it because your text was initially surrounded by double quotes ("). When we print, we print a sequence of characters called a String. That String is surrounded by double quotes. If you wanted to print a single character (char) you can also display it with single quotes. Therefore, if you wanted to print the single character of single quote, you would have to System.out.println('\'').</p>
+					<div class="block-code">
+						<textarea class="java-code">
+public class DriverClass {
+
+	public static void main(String[] args) {
+	
+		System.out.println("How \"the ' different\\ characters\t are \nshown");
+		
+	}
+	
+}
+						</textarea>
+					</div>
+
+					<div class="block">
+						How "the ' different\ characters&nbsp;&nbsp;&nbsp;&nbsp; are <br/>
+ 						shown
+					</div>
+					<hr class="major" />
+					
+					<h2>Exercises:</h2>
+					<p>Without typing them into Eclipse, can you tell what these programs will print?</p>
+					<div class="block-code">
+						<textarea class="java-code">
+public class DriverClass {
+
+	public static void main(String[] args) {
+		System.out.print("Are you sure you know what print() does?");
+		System.out.print("Can you tell what \n is?");
+	}
+	
+}
+						</textarea>
+					</div>
+					<button onclick="hiddenBlockClick(0)">Show Answer</button><br/><br/>
+					<div class="hiddenBlock">
+						Are you sure you know what print() does?Can you tell what <br/>
+ 						&nbsp;is?
+
+					</div>
+					<hr class="minor" />
+					<div class="block-code">
+						<textarea class="java-code">
+public class DriverClass {
+	public static void main(String[] args) {
+		System.out.println("\\");
+		System.out.println("\"");
+		System.out.println("\"\"");
+		System.out.println("\\\\");
+		System.out.println("So \\\\many '\\symbols\"\\, \"\"\\I can barely understand!");
+	}
+}
+						</textarea>
+					</div>
+					<button onclick="hiddenBlockClick(1)">Show Answer</button><br/><br/>
+					<div class="hiddenBlock">
+						\<br/>
+						"<br/>
+						""<br/>
+						\\<br/>
+						So \\many '\symbols"\, ""\I can barely understand!<br/>
+					</div>
+					<hr class="minor" />
+					<p>Write the code in Eclipse that will print the following code (there are multiple possible solutions):</p>
+					<div class="block">
+						You<br/>
+						now<br/>
+						master<br/>
+						the new lines
+					</div>
+					<button onclick="hiddenCodeClick(0)">Show Answer</button><br/><br/>
+					<div class="hiddenCodeBlock">
+						<textarea class="java-code">
+public class DriverClass {
+
+	public static void main(String[] args) {
+		System.out.println("You\nnow");
+		System.out.println("master");
+		System.out.print("the new lines");
+	}
+	
+}
+						</textarea>
+					</div>
+					<hr class="minor" />
+					<div class="block">
+						\\Congratulations! You know how to use special characters!@#$%^&#38;*()'"\
+					</div>
+					<button onclick="hiddenCodeClick(1)">Show Answer</button><br/><br/>
+					<div class="hiddenCodeBlock">
+						<textarea class="java-code">
+public class DriverClass {
+
+	public static void main(String[] args) {
+	
+		System.out.print("\\\\Congratulations! You know how to use special characters!@#$%^&#38;*()'\"\\");
+		
+	}
+	
+}
+						</textarea>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<!-- Sidebar -->
+		<div id="sidebar">
+			<div class="inner">
+
+				<!-- Menu -->
+				<nav id="menu">
+					<header class="major">
+						<h2>Menu</h2>
+					</header>
+					<ul>
+						<li><a href="index">01-Introduction</a></li>
+						<li><a href="setup-environment">02-Setup Environment</a></li>
+						<li>
+							<span class="opener">03-Basics</span>
+							<ul>
+								<li><a href="printing">3.1 Printing</a></li>
+								<li><a href="data-types">3.2 Data Types</a></li>
+								<li><a href="operators">3.3 Operators</a></li>
+								<li><a href="arrays">3.4 Arrays</a></li>
+							</ul>
+						</li>
+						<li><a href="if-statements">04-If Statements</a></li>
+						<li><a href="loops">05-Loops</a></li>
+						<li><a href="user-input">06-User Input</a></li>
+						<li>
+							<span class="opener">07-Formatting</span>
+							<ul>
+								<li><a href="date">7.1 Date</a></li>
+								<li><a href="string">7.2 String</a></li>
+								<li><a href="float">7.3 Float</a></li>
+							</ul>
+						</li>
+						<li><a href="methods">08-Methods</a></li>
+						<li>
+							<span class="opener">09-Classes</span>
+							<ul>
+								<li><a href="classes">9.1 Classes</a></li>
+								<li><a href="objects">9.2 Objects</a></li>
+								<li><a href="variables">9.3 Variables</a></li>
+								<li><a href="encapsulation">9.3 Encapsulation</a></li>
+							</ul>
+						</li>
+						<li><a href="file-access">10-File Access</a></li>
+						<li><a href="graphical-interface">11-Graphical Interface</a></li>
+						<li><a href="recursion">12-Recursion</a></li>
+						<li>
+							<span class="opener">13-Inheritance</span>
+							<ul>
+								<li><a href="inheritance">13.1 Inheritance</a></li>
+								<li><a href="abstraction">13.2 Abstraction</a></li>
+								<li><a href="polymorphism">13.3 Polymorphism</a></li>
+								<li><a href="overriding">13.4 Overriding</a></li>
+								<li><a href="overloading">13.4 Overloading</a></li>
+							</ul>
+						</li>
+						<li><a href="interfaces">14-Interfaces</a></li>
+						<li><a href="packages">15-Packages</a></li>
+						<li>
+							<span class="opener">16-Data Structures</span>
+							<ul>
+								<li><a href="collection">16.1 Collection</a></li>
+								<li><a href="arraylist">16.2 arraylist</a></li>
+								<li><a href="set">16.3 Set</a></li>
+								<li><a href="dictionary">16.4 Dictionary</a></li>
+								<li><a href="linkedlist">16.5 LinkedList</a></li>
+								<li><a href="stack-and-queue">16.6 Stack and Queue</a></li>
+								<li><a href="graph">16.7 Graph</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="opener">17-Trees</span>
+							<ul>
+								<li><a href="traversal">17.1 Traversal</a></li>
+								<li><a href="binary-trees">17.2 Binary Trees</a></li>
+								<li><a href="binary-traversal">17.3 Binary Traversal</a></li>
+							</ul>
+						</li>
+						<li><a href="complexity">18-Complexity</a></li>
+						<li><a href="sorting">19-Sorting</a></li>
+						<li>
+							<span class="opener">20-Threads</span>
+							<ul>
+								<li><a href="multithreads">20.1 Multithreads</a></li>
+								<li><a href="synchronization">20.2 Synchronization</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<p class="copyright">&copy; WISQ. All rights reserved.</p>
+				</footer>
+			</div>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="assets/js/main.js"></script>
+	<script>
+		window.onload = setJava();
+
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Setup Environment</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="java-tutorial/setup-environment" class="logo">Setup Environment</a>
+								</header>
+
+							<!-- Content -->
+								<section>
+
+									<header>
+										<h1>Setting up for the first time.</h1>
+									</header>
+									<h2>Requirments:</h2>
+                                    <ul>
+                                        <li>
+                                         	Java JDK: <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" >http://www.oracle.com/technetwork/java/javase/downloads/index.html</a><br/>
+                                            If you are using Windows, make sure you download the correct version. x64 if you are on a 64 bit windows or x86 if on a 32 bit one.<br />
+                                            Click <a href="https://support.microsoft.com/en-us/help/827218/how-to-determine-whether-a-computer-is-running-a-32-bit-version-or-64-bit-version-of-the-windows-operating-system" >here</a> if you're not sure how to check you windows version you have.
+                                        </li>
+                                        <li>
+                                            Eclipse:<a href="https://www.eclipse.org/downloads/" >https://www.eclipse.org/downloads/</a><br/>
+                                            Once again, make sure to install the correct x86 or x64 version depending on your Windows version.<br/>
+                                            If asked for which Eclipse version to download, go for "Eclipse IDE for Java Developers" or "Eclipse IDE for Java EE Developers" (EE stands for Enterprise Edition)
+                                        </li>
+                                    </ul>
+                                    
+                                    
+									<hr class="major" />
+                                    <h2>Selecting the Workspace:</h2>
+									<p>
+                                       When opening Eclipse for the first time, it will ask you where to setup your <b>workspace</b>. The workspace is where all your java projects will be stored and also your Eclipse configuration. Remember where you have set your workspace directory as you might need it in the future if you will want to access the source files for your code.</p>
+                                    <hr class="major" />
+                                    <h2>Setting up a new project:</h2>
+                                    <h3>Creating a new project</h3>
+                                    <p>
+                                    	To create a new project Go in File -> New -> Java Project
+                                    </p>
+                                    <span class="image main">
+										<img src="images/project-menu.png" alt="" />
+									</span>
+									<p>
+										You will need to give the project a name. This is the name that you will find if you go to your workspace folder. Select Finish to create the project.
+									</p>
+									<span class="image">
+										<img src="images/project-creation.png" alt=""/>
+									</span>
+									<h3><br/>Creating a class</h3>
+									<p>
+										You must next create a class. The class is where your code will be going. Right click the "src" folder inside your project -> New -> Class.
+									</p>
+									<span class="image main">
+										<img src="images/class-menu.png" alt="" />
+									</span>
+									<p>
+										You will need to give a name to your class. By convention, your class names must always start with a capital letter. Also, as this is the first class of your program, it will be your main class. You must select the option "public static void main(String args)". That will create a "main method" and will be where the program will start to read your code. If you don't have it selected and create a class without a main method, the program won't know where to start reading the code and therefore wont run. If creating multiple classes, only one class must have the "main" selected as the program cannot start reading at two different places at once.
+									</p>
+									<span class="image">
+										<img src="images/class-creation.png" alt="" />
+									</span>
+									<h3><br/>Running your project</h3>
+									<p>
+										Your Eclipse should look similar to the next picture. To test some code, inside the main method type in:</p> <pre><code>System.out.println("Hello World");</code></pre><p>You must then click on the green arrow on top to run the code. You will see the result at the bottom of the screen in the Console where it should say "Hello World".
+									</p>
+									<span class="image main">
+										<img src="images/run-program.png" alt="" />
+									</span>
+									<h3>Reset the view</h3>
+									<p>
+										If you ever accidentally close your Project explorer, your console or any other window and can't find how to open them again like in the following picture, simple go to Window -> Perspective -> Reset Perspective. This should reset all the different windows to how it was when you first installed Eclipse.
+									</p>
+									<span class="image main">
+										<img src="images/reset-perspective.png" alt="" />
+									</span>
+									<hr class="major" />
+									<h2>Video Instructions</h2>
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/9uE9SGTwf7E" frameborder="0" allowfullscreen></iframe>
+								</section>
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index">01-Introduction</a></li>
+										<li><a href="setup-environment">02-Setup Environment</a></li>
+										<li>
+											<span class="opener">03-Basics</span>
+											<ul>
+												<li><a href="printing">3.1 Printing</a></li>
+												<li><a href="data-types">3.2 Data Types</a></li>
+												<li><a href="operators">3.3 Operators</a></li>
+												<li><a href="arrays">3.4 Arrays</a></li>
+											</ul>
+										</li>
+										<li><a href="if-statements">04-If Statements</a></li>
+										<li><a href="loops">05-Loops</a></li>
+										<li><a href="user-input">06-User Input</a></li>
+										<li>
+											<span class="opener">07-Formatting</span>
+											<ul>
+												<li><a href="date">7.1 Date</a></li>
+												<li><a href="string">7.2 String</a></li>
+												<li><a href="float">7.3 Float</a></li>
+											</ul>
+										</li>
+										<li><a href="methods">08-Methods</a></li>
+										<li>
+											<span class="opener">09-Classes</span>
+											<ul>
+												<li><a href="classes">9.1 Classes</a></li>
+												<li><a href="objects">9.2 Objects</a></li>
+												<li><a href="variables">9.3 Variables</a></li>
+												<li><a href="encapsulation">9.3 Encapsulation</a></li>
+											</ul>
+										</li>
+										<li><a href="file-access">10-File Access</a></li>
+										<li><a href="graphical-interface">11-Graphical Interface</a></li>
+										<li><a href="recursion">12-Recursion</a></li>
+										<li>
+											<span class="opener">13-Inheritance</span>
+											<ul>
+												<li><a href="inheritance">13.1 Inheritance</a></li>
+												<li><a href="abstraction">13.2 Abstraction</a></li>
+												<li><a href="polymorphism">13.3 Polymorphism</a></li>
+												<li><a href="overriding">13.4 Overriding</a></li>
+												<li><a href="overloading">13.4 Overloading</a></li>
+											</ul>
+										</li>
+										<li><a href="interfaces">14-Interfaces</a></li>
+										<li><a href="packages">15-Packages</a></li>
+										<li>
+											<span class="opener">16-Data Structures</span>
+											<ul>
+												<li><a href="collection">16.1 Collection</a></li>
+												<li><a href="arraylist">16.2 arraylist</a></li>
+												<li><a href="set">16.3 Set</a></li>
+												<li><a href="dictionary">16.4 Dictionary</a></li>
+												<li><a href="linkedlist">16.5 LinkedList</a></li>
+												<li><a href="stack-and-queue">16.6 Stack and Queue</a></li>
+												<li><a href="graph">16.7 Graph</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">17-Trees</span>
+											<ul>
+												<li><a href="traversal">17.1 Traversal</a></li>
+												<li><a href="binary-trees">17.2 Binary Trees</a></li>
+												<li><a href="binary-traversal">17.3 Binary Traversal</a></li>
+											</ul>
+										</li>
+										<li><a href="complexity">18-Complexity</a></li>
+										<li><a href="sorting">19-Sorting</a></li>
+										<li>
+											<span class="opener">20-Threads</span>
+											<ul>
+												<li><a href="multithreads">20.1 Multithreads</a></li>
+												<li><a href="synchronization">20.2 Synchronization</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; WISQ. All rights reserved.</p>
+								</footer>
+						</div>
+					</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
